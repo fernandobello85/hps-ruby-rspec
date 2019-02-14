@@ -84,10 +84,6 @@
   parameters:
   - name: __datatable
   body_hash: d41d8cd98f00b204e9800998ecf8427e
-- name: 'the '
-  uid: 75600519-f73b-4b82-9135-19c3fccf1c47
-  parameters: []
-  body_hash: d41d8cd98f00b204e9800998ecf8427e
 - name: I take 500 coffees
   uid: '058a1ef2-97e0-4194-8c85-25cd1484f499'
   parameters: []
