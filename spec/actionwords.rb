@@ -1,62 +1,53 @@
 # encoding: UTF-8
-require_relative '../src/coffee_machine'
-
 
 module Actionwords
-  def sut
-    @sut ||= CoffeeMachine.new
-  end
-
-  def handled_tanks
-    @handled_tanks ||= []
-  end
-
-  def i_start_the_coffee_machine_using_language_lang(lang = 'en')
-    sut.start(lang)
+  def i_start_the_coffee_machine_using_language_lang(lang = "en")
+    # TODO: Implement action: "Start the coffee machine using language #{lang}"
+    raise NotImplementedError
   end
 
   def i_shutdown_the_coffee_machine
-    sut.stop
+    # TODO: Implement action: "Shutdown coffee machine"
+    raise NotImplementedError
   end
 
-  def message_message_should_be_displayed(message)
-    expect(sut.message).to eq(message)
+  def message_message_should_be_displayed(message = "")
+    # TODO: Implement result: "Displayed message is \"#{message}\""
+    raise NotImplementedError
   end
 
   def coffee_should_be_served
-    expect(sut.coffee_served).to be_truthy
+    # TODO: Implement result: "Coffee is served :)"
+    raise NotImplementedError
   end
 
   def coffee_should_not_be_served
-    expect(sut.coffee_served).to be_falsey
+    # TODO: Implement result: "No coffee is served :("
+    raise NotImplementedError
   end
 
   def i_take_a_coffee
-    sut.take_coffee
+    # TODO: Implement action: "Take a coffee"
+    raise NotImplementedError
   end
 
   def i_empty_the_coffee_grounds
-    sut.empty_grounds
+    # TODO: Implement action: "Empty coffee grounds"
+    raise NotImplementedError
   end
 
   def i_fill_the_beans_tank
-    sut.fill_beans
+    # TODO: Implement action: "Fill beans"
+    raise NotImplementedError
   end
 
   def i_fill_the_water_tank
-    sut.fill_tank
+    # TODO: Implement action: "Fill water tank"
+    raise NotImplementedError
   end
 
   def i_take_coffee_number_coffees(coffee_number = 10)
-    coffee_number = coffee_number.to_i
-    while (coffee_number > 0)
-      i_take_a_coffee
-      coffee_number = coffee_number - 1
 
-      i_fill_the_water_tank if handled_tanks.include?(:water)
-      i_fill_the_beans_tank if handled_tanks.include?(:beans)
-      i_empty_the_coffee_grounds if handled_tanks.include?(:grounds)
-    end
   end
 
   def the_coffee_machine_is_started
@@ -69,15 +60,15 @@ module Actionwords
   end
 
   def i_handle_water_tank
-    handled_tanks << :water
+
   end
 
   def i_handle_beans
-    handled_tanks << :beans
+
   end
 
   def i_handle_coffee_grounds
-    handled_tanks << :grounds
+
   end
 
   def i_handle_everything_except_the_beans
@@ -95,15 +86,22 @@ module Actionwords
   end
 
   def i_switch_to_settings_mode
-    sut.show_settings
+
   end
 
   def settings_should_be(__datatable = "||")
-    table = __datatable.split("\n").map do |row|
-      row.split("|").map(&:strip).compact
-    end.compact
 
-    settings_as_table = sut.get_settings.map {|k, v| ["", k.to_s, v.to_s]}
-    expect(settings_as_table).to eq(table)
+  end
+
+  def the
+
+  end
+
+  def i_take_500_coffees
+
+  end
+
+  def a_nofification_about_descaling_is_displayed
+
   end
 end

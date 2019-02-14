@@ -19,7 +19,7 @@ describe 'Descaling' do
     the_coffee_machine_is_started
     # When I take "500" coffees
     i_take_coffee_number_coffees(500)
-    # Then a nofification about decaling is displayed
-    a_nofification_about_decaling_is_displayed
+    # Then a nofification about descaling is displayed
+    a_nofification_about_descaling_is_displayed
   end
 end
